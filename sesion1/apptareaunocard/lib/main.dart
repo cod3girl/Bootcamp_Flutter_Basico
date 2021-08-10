@@ -24,8 +24,8 @@ class _TareaCardState extends State<TareaCard> {
             body: Center(
               child: Container(
                 padding: EdgeInsets.all(30.5),
-                width: 500,
-                height: 600,
+                width: 400,
+                height: 450,
                 child: Card(
                   color: Color(0xffECC0F1),
                   shape: RoundedRectangleBorder(
@@ -36,42 +36,40 @@ class _TareaCardState extends State<TareaCard> {
                         Padding(padding: EdgeInsets.all(9.5)),
                         Text("Bootcamp Code Girl",
                             style: TextStyle(
-                                fontSize: 20, color: Colors.deepPurpleAccent)
-                        ),
+                                fontSize: 20, color: Colors.deepPurpleAccent)),
                         SizedBox(height: 10),
-                        Container(
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(9.5))
+                        ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          child: Container(
+                            width: 200,
+                            height: 200,
+                            child: Image(
+                              image: NetworkImage(
+                                'https://picsum.photos/id/$imageNumber/300/300',
                               ),
-                          width: 300,
-                          height: 300,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://picsum.photos/id/$imageNumber/300/300',
+                              fit: BoxFit.fitHeight,
                             ),
-                            fit: BoxFit.fitHeight,  
                           ),
                         ),
                         SizedBox(height: 10),
                         Text("@Lesly.Samaritano",
                             style: TextStyle(
                                 fontSize: 20, color: Colors.purpleAccent)),
-                        SizedBox(height: 20),
-                        TextButton(
-                            onPressed: () => {
-                                  setState(() {
-                                    imageNumber++;
-                                  })
-                                },
-                            child: Text('Siguiente',
-                                style: TextStyle(
-                                    fontSize: 20, color: Colors.white)),
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.deepPurpleAccent),
-                              padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10.5)),
-                            )
-                          ),
+                        SizedBox(height: 15),
+                        MaterialButton(
+                          onPressed: () => {
+                            setState(() {
+                              imageNumber++;
+                            })
+                          },
+                          child: Text('Siguiente',
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.white)),
+                          color: Colors.deepPurpleAccent,
+                          padding: EdgeInsets.all(8.5),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                        )
                       ],
                     ),
                   ),
