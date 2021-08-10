@@ -31,7 +31,9 @@ class _CodeGirlAppState extends State<CodeGirlApp> {
                 child: Image.network(
                   "https://picsum.photos/id/$imageNumber/300/300",
                   fit: BoxFit.fill,
-                ))),
+                )
+            )
+          ),
       ),
     );
   }
