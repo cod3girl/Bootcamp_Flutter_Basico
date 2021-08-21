@@ -1,19 +1,22 @@
+import 'package:apptareados/pages/Inicio_Page.dart';
 import 'package:flutter/material.dart';
-import 'widgets/Home.dart';
+import 'widgets/Principal.dart';
+
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Home(),
+        body: Principal(),
       ),
+      routes: {
+        "/PaginaInicio": (context) => IniciPage(),
+      },
     );
   }
 }
