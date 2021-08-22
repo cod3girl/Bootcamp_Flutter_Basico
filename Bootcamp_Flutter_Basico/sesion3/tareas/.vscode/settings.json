@@ -1,0 +1,20 @@
+{
+    "files.exclude": {
+        "web": true,
+        ".flutter-plugins": true,
+        ".flutter-plugins-dependencies": true,
+        ".gitignore": true,
+        ".metadata": true,
+        ".packages": true,
+        "pubspec.lock": true,
+        "README.md": true,
+        "third_class.iml": true,
+        ".dart_tool": true,
+        ".idea": true,
+        ".vscode": true,
+        "android": true,
+        "build": true,
+        "ios": true
+    },
+    "workspace.isHidden": false
+}
